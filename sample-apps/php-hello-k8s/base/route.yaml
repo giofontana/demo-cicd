@@ -1,0 +1,13 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: php-hello
+  labels:
+    app: php-hello
+spec:
+  to:
+    kind: Service
+    name: php-hello
+    weight: 100
+  port:
+    targetPort: 8080-tcp
