@@ -18,7 +18,7 @@ spec:
         image-registry.openshift-image-registry.svc:5000/demo-cicd/quarkus-quickstarts
       name: IMAGE_NAME
       type: string
-    - default: quarkus-getting-started
+    - default: sample-apps/quarkus-getting-started
       name: PATH_CONTEXT
       type: string
     - name: K8S_MANIFESTS_PATH

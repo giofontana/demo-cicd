@@ -18,12 +18,14 @@ spec:
         image-registry.openshift-image-registry.svc:5000/demo-cicd/quarkus-quickstarts
       name: IMAGE_NAME
       type: string
-    - default: quarkus-getting-started
+    - default: sample-apps/quarkus-getting-started
       name: PATH_CONTEXT
       type: string
     - default: openjdk-17-ubi8
       name: VERSION
       type: string
+    - name: ARGO_APP_PATH
+      type: string      
   tasks:
     - name: fetch-repository
       params:
@@ -64,7 +66,7 @@ spec:
         - name: SCRIPT
           value: >-
             set -euxo pipefail; 
-            oc apply -f chapter14/Deploy/argo-app.yaml; 
+            oc apply -f $(params.ARGO_APP_PATH); 
             counter=0;
             timeout=120;
             while [[ $(oc get applications.argoproj.io/quarkus-quickstarts -o jsonpath='{.status.health.status}' -n openshift-gitops) != "Healthy" ]];

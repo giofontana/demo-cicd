@@ -15,9 +15,9 @@ spec:
       value: >-
         quay-quay-enterprise-registry.apps.simpsons.lab.gfontana.me/demo/quarkus-quickstarts:v1
     - name: PATH_CONTEXT
-      value: quarkus-getting-started
+      value: sample-apps/quarkus-getting-started
     - name: K8S_MANIFESTS_PATH
-      value: "sample-app/quarkus-getting-started/k8s/overlay/v1/"
+      value: "sample-apps/quarkus-getting-started/k8s/overlay/v1/"
     - name: VERSION
       value: openjdk-17-ubi8
   pipelineRef:

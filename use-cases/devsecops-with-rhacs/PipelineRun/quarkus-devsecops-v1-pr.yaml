@@ -15,11 +15,11 @@ spec:
       value: >-
         quay-quay-enterprise-registry.apps.simpsons.lab.gfontana.me/demo/quarkus-quickstarts:v1
     - name: PATH_CONTEXT
-      value: quarkus-getting-started
+      value: sample-apps/quarkus-getting-started
     - name: VERSION
       value: openjdk-17-ubi8
     - name: ARGO_APP_PATH
-      value: "chapter14/DevSecOps/argo-app-v1.yaml"
+      value: "use-cases/devsecops-with-rhacs/argo-app-v1.yaml"
   pipelineRef:
     name: quarkus-devsecops-v1
   serviceAccountName: pipeline
