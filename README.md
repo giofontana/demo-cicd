@@ -22,15 +22,15 @@ oc create -f use-cases/deploy-with-argocd/PipelineRun/quarkus-build-and-deploy-p
 ### Building app with OpenShift Pipelines (Tekton) checking vulnerabilities with RH ACM and deploying with OpenShift GitOps (ArgoCD)
 
 ```
-oc apply -f use-cases/devsecops-with-rhacm/Task/
-oc apply -f use-cases/devsecops-with-rhacm/Pipeline/quarkus-devsecops-v1-pi.yaml
-oc create -f use-cases/devsecops-with-rhacm/PipelineRun/quarkus-devsecops-v1-pr.yaml
+oc apply -f use-cases/devsecops-with-rhacs/Task/
+oc apply -f use-cases/devsecops-with-rhacs/Pipeline/quarkus-devsecops-v1-pi.yaml
+oc create -f use-cases/devsecops-with-rhacs/PipelineRun/quarkus-devsecops-v1-pr.yaml
 ```
 
 *Fixing sec vulnerability*:
 
 ```
-oc apply -f use-cases/devsecops-with-rhacm/Task/
-oc apply -f use-cases/devsecops-with-rhacm/Pipeline/quarkus-devsecops-v2-pi.yaml
-oc create -f use-cases/devsecops-with-rhacm/PipelineRun/quarkus-devsecops-v2-pr.yaml
+oc apply -f use-cases/devsecops-with-rhacs/Task/
+oc apply -f use-cases/devsecops-with-rhacs/Pipeline/quarkus-devsecops-v2-pi.yaml
+oc create -f use-cases/devsecops-with-rhacs/PipelineRun/quarkus-devsecops-v2-pr.yaml
 ```
