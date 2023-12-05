@@ -6,5 +6,5 @@ bases:
 
 images:
 - name: changeme
-  newName: quay.io/redhattraining/php-hello-dockerfile:latest
+  newName: quay.io/redhattraining/php-hello-dockerfile
   newTag: "latest"
